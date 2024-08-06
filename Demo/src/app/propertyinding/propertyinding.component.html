@@ -1,0 +1,11 @@
+<h2>Property Binding</h2>
+
+<!-- <img [src]="imageurl" width="500" height="400" /><br /> -->
+
+<input (input)="getData($event)" [type]="myTypeValue" /> <br />
+<p>{{ data }}</p>
+<input type="text" (keydown.shift.s)="getkey($event)" [(ngModel)]="v" />
+<p>{{ v }}</p>
+<input checked type="radio" name="typeValue" (change)="changeToText()" />Text
+
+<input type="radio" name="typeValue" (change)="changeToPassword()" />Password

@@ -1,0 +1,22 @@
+.profileContainer {
+  width: 1000px;
+  height: 400px;
+  box-shadow: 0 0 10px black;
+  margin: 50px auto;
+  display: flex;
+}
+.leftPanel {
+  width: 35%;
+}
+.darkRightPanel {
+  width: 65%;
+  padding: 20px;
+  color: white;
+  background-color: black;
+}
+.lightRightPanel {
+  width: 65%;
+  padding: 20px;
+  color: black;
+  background-color: white;
+}

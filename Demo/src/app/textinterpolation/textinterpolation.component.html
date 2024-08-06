@@ -1,0 +1,12 @@
+<div class="profile">
+  <img [src]="user.image" width="100%" height="270" />
+  <h3 class="h4">{{ user.name }}</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+  <button
+    class="btn btn-outline-success"
+    (mouseenter)="changeUser($event)"
+    (click)="changeUser($event)"
+  >
+    Profile
+  </button>
+</div>

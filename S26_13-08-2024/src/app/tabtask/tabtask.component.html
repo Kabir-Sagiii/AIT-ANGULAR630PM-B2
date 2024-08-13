@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div class="row mt-5">
+    <div class="col-12">
+      <ul class="nav nav-tabs">
+        @for(tech of techdata;track tech){
+        <li class="nav-item">
+          <a
+            (click)="techSelection(tech)"
+            class="nav-link"
+            [ngClass]="{ 'bg-dark': tech === 'React' }"
+            href="#"
+            >{{ tech }}</a
+          >
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      @if(tech==="Angular"){
+      <app-angular></app-angular>
+      }@else if(tech==="React"){
+      <app-react></app-react>
+      }@else{
+      <app-node></app-node>
+      }
+    </div>
+  </div>
+</div>

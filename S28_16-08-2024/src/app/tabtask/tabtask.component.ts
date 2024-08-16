@@ -12,14 +12,13 @@ import { NodeComponent } from '../Tech\'s/node/node.component';
 })
 export class TabtaskComponent {
 
-techdata = ["Angular","React","Node JS","MongoDB","Express JS"]
+techdata = ["Angular","React","Node JS","MongoDB","Express JS","Java","Python"]
 tech:string="Angular"
 
-isActive:boolean = false
+
+
 techSelection(tech:string){
   this.tech = tech
   
-
- 
 }
 }

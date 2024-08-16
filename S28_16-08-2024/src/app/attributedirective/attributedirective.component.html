@@ -1,0 +1,47 @@
+<h2
+  class="mt-5 text-center"
+  [ngStyle]="{ color: colorName, backgroundColor: bgColor }"
+  (mouseenter)="changeColorStyle('red', 'orange')"
+  (mouseleave)="changeColorStyle('green', 'black')"
+>
+  I am working with ngStyle Directive
+</h2>
+
+<!-- <div [ngClass]="dynamicStyle">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nihil
+  perferendis dolores itaque, ullam architecto officiis molestiae, odit error
+  harum repellendus qui consequatur ea recusandae ipsa, voluptatum fugit dolorum
+  voluptates nostrum eligendi earum quasi deserunt provident. Repellat labore
+  quae incidunt minima. Reprehenderit perspiciatis asperiores consequuntur fuga!
+  Architecto reprehenderit placeat id! Voluptatibus ratione, explicabo sunt
+  laboriosam, repudiandae deserunt amet ex, eligendi molestiae placeat nesciunt
+  veritatis nam fugit cupiditate laudantium sapiente dolorem.
+</div> -->
+
+<!-- <div [ngClass]="{ greenContainer: isGreen, blueContainer: !isGreen }">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nihil
+  perferendis dolores itaque, ullam architecto officiis molestiae, odit error
+  harum repellendus qui consequatur ea recusandae ipsa, voluptatum fugit dolorum
+  voluptates nostrum eligendi earum quasi deserunt provident. Repellat labore
+  quae incidunt minima. Reprehenderit perspiciatis asperiores consequuntur fuga!
+  Architecto reprehenderit placeat id! Voluptatibus ratione, explicabo sunt
+  laboriosam, repudiandae deserunt amet ex, eligendi molestiae placeat nesciunt
+  veritatis nam fugit cupiditate laudantium sapiente dolorem.
+</div> -->
+
+<!-- <div class="w-75 mx-auto mt-5 d-flex">
+  <div class="mx-5">
+    <input
+      type="radio"
+      checked
+      name="styles"
+      (change)="changeClassStyle(true)"
+    />
+    <label>Dark Theme</label>
+  </div>
+
+  <div>
+    <input type="radio" name="styles" (change)="changeClassStyle(false)" />
+    <label>Light Theme</label>
+  </div>
+</div> -->

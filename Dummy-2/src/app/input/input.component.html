@@ -1,0 +1,6 @@
+<div>
+  <input type="text" #ref />
+  <button (click)="getData(ref)">submit</button>
+  <app-namecomp [name]="pname" (event)="get($event)"></app-namecomp>
+  <p>{{ cdata }}</p>
+</div>

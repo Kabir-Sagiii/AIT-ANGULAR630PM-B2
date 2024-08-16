@@ -3,13 +3,16 @@
     <div class="col-12">
       <ul class="nav nav-tabs">
         @for(tech1 of techdata;track tech;let i=$index){
-        <li class="nav-item">
+        <li class="nav-item mx-4">
           <a
             #anchor
             (click)="techSelection(tech1)"
             class="nav-link"
+            [ngClass]="{
+              'bg-dark': anchor.textContent === tech,
+              'text-white': anchor.textContent === tech
+            }"
             href="#"
-            [ngClass]="{ active: anchor.textContent === tech }"
             >{{ tech1 }}</a
           >
         </li>

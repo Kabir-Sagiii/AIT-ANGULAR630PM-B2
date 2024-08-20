@@ -1,0 +1,7 @@
+<div>
+  <h2>Parent Component</h2>
+  <input type="text" placeholder="enter text" #inputref />
+  <button (click)="getInputData(inputref)">Submit</button>
+  <hr />
+  <app-details [username]="inputValue"></app-details>
+</div>

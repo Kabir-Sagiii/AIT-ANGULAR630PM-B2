@@ -1,0 +1,2 @@
+https://api.github.com/users/{user} : fetch api
+https://www.youtube.com/watch?v=ialfZyeAbaY&t=169s : Promise video

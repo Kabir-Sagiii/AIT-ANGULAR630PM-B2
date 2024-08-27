@@ -1,0 +1,40 @@
+<div class="card my-4">
+  <div class="card-header">
+    <img [src]="productData.image" width="100%" height="200" />
+  </div>
+  <div class="card-body">
+    <h6>{{ productData.productName }}</h6>
+    <p>${{ productData.price }}</p>
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione?
+    </p>
+    <button
+      class="btn btn-outline-success"
+      data-bs-toggle="modal"
+      data-bs-target="#mymodal"
+    >
+      Product Details
+    </button>
+  </div>
+
+  <div class="modal fade" id="mymodal">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header"></div>
+        <div class="modal-body">
+          <app-productdetails></app-productdetails>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

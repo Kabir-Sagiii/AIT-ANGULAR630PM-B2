@@ -15,7 +15,6 @@ export class AComponent {
   
 
   dataservice= inject(DatasService)
-  
   // constructor(dataservice:DatasService){
   //  this.dataservice = dataservice
   // }

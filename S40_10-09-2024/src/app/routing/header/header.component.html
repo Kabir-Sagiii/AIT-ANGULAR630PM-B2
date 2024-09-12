@@ -1,0 +1,21 @@
+<div>
+  <!-- <a routerLink="/" [ngClass]="home" (click)="assignActiveClass('home')"
+    >Home</a
+  >
+  <a
+    routerLink="/products"
+    [ngClass]="product"
+    (click)="assignActiveClass('product')"
+    >Products</a
+  > -->
+  <a
+    routerLink="/"
+    [routerLinkActive]="'active'"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Home</a
+  >
+  <a routerLink="/products" [routerLinkActive]="'active'">Products</a>
+  <a routerLink="/profile" [routerLinkActive]="'active'">Profile</a>
+  <a routerLink="/contact" [routerLinkActive]="'active'">ContactUs</a>
+  <a routerLink="/login" [routerLinkActive]="'active'">Login</a>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <h1>Child Component</h1>
+  </div>
+  <input
+    [(ngModel)]="inputData"
+    type="text"
+    placeholder="Enter Some Text"
+    class="my-2 form-control"
+  />
+  <button class="btn btn-success" (click)="triggerMyCustomEvent()">
+    Submit
+  </button>
+</div>

@@ -13,12 +13,7 @@
     dolorem veniam modi quidem unde quos! Officia animi laborum qui
     reprehenderit debitis. Quos dignissimos fugiat exercitationem.
   </p>
-  <button class="btn btn-primary" (click)="getProducts()">Get Products</button>
-  <select (change)="getLimitedProducts($event)">
-    <option>5</option>
-    <option>10</option>
-    <option>15</option>
-  </select>
+  <app-dropdown></app-dropdown>
   @if(productsData.length > 0){
   <div class="d-flex flex-wrap justify-content-evenly">
     @for( product of productsData;track product){

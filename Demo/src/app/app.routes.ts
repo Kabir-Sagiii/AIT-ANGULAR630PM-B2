@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './routing/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './routing/profile/profile.component';
 import { ContactusComponent } from './routing/contactus/contactus.component';
 import { LoginComponent } from './routing/login/login.component';
@@ -12,7 +12,7 @@ import { ProductsComponent } from './Path-Query-Parameters/products/products.com
 import { ProductdetailsComponent } from './Path-Query-Parameters/productdetails/productdetails.component';
 export const routes: Routes = [
    
-     {path:"",component:GithubHomeComponent},
+     {path:"",component:HomeComponent},
      {path:"products",component:ProductsComponent},
 
      {path:"profile",component:ProfileComponent,children:[

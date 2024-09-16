@@ -22,5 +22,15 @@
   >
   <a routerLink="/profile" [routerLinkActive]="'active'">Profile</a>
   <a routerLink="/contact" [routerLinkActive]="'active'">ContactUs</a>
+  @if(!auth.isLoggedIn){
   <a routerLink="/login" [routerLinkActive]="'active'">Login</a>
+  } @if(auth.isLoggedIn){
+  <a
+    class="btn btn-outline-danger"
+    routerLink="/login"
+    (click)="auth.isLoggedIn = false"
+    [routerLinkActive]="'active'"
+    >Logout</a
+  >
+  }
 </div>

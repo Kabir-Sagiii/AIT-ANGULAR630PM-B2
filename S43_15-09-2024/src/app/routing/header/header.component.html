@@ -1,13 +1,4 @@
 <div>
-  <!-- <a routerLink="/" [ngClass]="home" (click)="assignActiveClass('home')"
-    >Home</a
-  >
-  <a
-    routerLink="/products"
-    [ngClass]="product"
-    (click)="assignActiveClass('product')"
-    >Products</a
-  > -->
   <a
     routerLink="/"
     [routerLinkActive]="'active'"
@@ -22,5 +13,10 @@
   >
   <a routerLink="/profile" [routerLinkActive]="'active'">Profile</a>
   <a routerLink="/contact" [routerLinkActive]="'active'">ContactUs</a>
+
+  @if(auth.isLoggedIn){
+  <button class="btn btn-outline-danger" (click)="logoutUser()">Logout</button>
+  }@else {
   <a routerLink="/login" [routerLinkActive]="'active'">Login</a>
+  }
 </div>

@@ -11,12 +11,16 @@ import { ProfessionalComponent } from './routing/professional/professional.compo
 import { ProductsComponent } from './Path-Query-Parameters/products/products.component';
 import { ProductdetailsComponent } from './Path-Query-Parameters/productdetails/productdetails.component';
 import { ElectronicsComponent } from './Path-Query-Parameters/electronics/electronics.component';
+import { ActivateRoute } from './Route-Guard/canActivate/CanActivate';
 export const routes: Routes = [
    
      {path:"",component:ProductcardComponent},
      {path:"products",component:ProductsComponent},
-     {path:"electronics",component:ElectronicsComponent},
-     {path:"profile",component:ProfileComponent,children:[
+
+     {path:"electronics",component:ElectronicsComponent,
+          canActivate:[ActivateRoute]},
+
+     {path:"profile",canActivateChild:[ActivateRoute],component:ProfileComponent,children:[
           {path:'education',component:EducationalComponent},
           {path:'professional',component:ProfessionalComponent},
      ]},

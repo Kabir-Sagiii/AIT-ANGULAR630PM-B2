@@ -1,0 +1,73 @@
+<div class="container mt-5 shadow p-5">
+  <div class="row text-center">
+    <div class="col-12">
+      <h2>Template Driven Form</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <form (ngSubmit)="getUsersData(myform, myusername)" #myform="ngForm">
+        <div class="my-2">
+          <input
+            type="text"
+            name="username"
+            required
+            minlength="5"
+            [(ngModel)]="username"
+            #myusername="ngModel"
+            placeholder="username"
+            class="form-control"
+            [ngClass]="{
+              valid: myform.submitted && myusername.valid,
+              invalid: myform.submitted && myusername.invalid
+            }"
+          />
+          @if(myform.submitted && myusername.control.getError('required') ){
+          <span class="text-danger">*username is required</span>
+          } @if(myform.submitted &&
+          myform.controls['username'].getError('minlength')){
+          <span class="text-danger">*enter minimum 5 character's</span>
+          }
+        </div>
+        <div class="my-2">
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="password"
+            class="form-control"
+            #password="ngModel"
+          />
+        </div>
+        <div class="my-2">
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="myemail"
+            placeholder="email"
+            class="form-control"
+            #email="ngModel"
+          />
+        </div>
+        <div class="my-2">
+          <input type="submit" class="btn btn-outline-primary" />
+          <button
+            (click)="resetForm()"
+            class="btn btn-danger mx-2 my-2"
+            type="button"
+          >
+            Reset
+          </button>
+          <button
+            (click)="setdefaultValue()"
+            class="btn btn-danger mx-2 my-2"
+            type="button"
+          >
+            set Default Value
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

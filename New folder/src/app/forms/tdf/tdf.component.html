@@ -1,0 +1,66 @@
+<div class="container mt-5 shadow p-5">
+  <div class="row text-center">
+    <div class="col-12">
+      <h2>Template Driven Form</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <form (ngSubmit)="getUsersData(myform)" #myform="ngForm">
+        <div class="my-2">
+          <input
+            required
+            type="text"
+            name="username"
+            ngModel
+            #myname="ngModel"
+            placeholder="username"
+            class="form-control"
+          />
+          @if(myform.submitted && myname.invalid ){
+          <small class="text-danger">*Please Add the Text</small>
+          }
+          <!-- @if(myform.submitted && myform.controls['username'].invalid){
+          <small class="text-danger">*Please Add the Text</small>
+          } -->
+        </div>
+        <div class="my-2">
+          <input
+            type="password"
+            name="password"
+            ngModel
+            placeholder="password"
+            class="form-control"
+          />
+        </div>
+        <div class="my-2">
+          <input
+            type="email"
+            name="email"
+            ngModel
+            placeholder="email"
+            class="form-control"
+          />
+        </div>
+        <div class="my-2">
+          <input type="submit" class="btn btn-outline-primary" />
+          <button
+            class="btn btn-warning mx-1"
+            type="button"
+            (click)="setV(myform)"
+          >
+            set value
+          </button>
+          <button
+            class="btn btn-info mx-1 mt-3"
+            type="button"
+            (click)="resetV(myform)"
+          >
+            patch value
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

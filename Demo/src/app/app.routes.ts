@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import {PipesComponent} from './Pipes/pipes/pipes.component'
+import { TDFComponent } from './forms/tdf/tdf.component';
 import { HomeComponent } from './routing/home/home.component';
 import { ProfileComponent } from './routing/profile/profile.component';
 import { ContactusComponent } from './routing/contactus/contactus.component';
@@ -12,13 +14,19 @@ import { ProductsComponent } from './Path-Query-Parameters/products/products.com
 import { ProductdetailsComponent } from './Path-Query-Parameters/productdetails/productdetails.component';
 import { ElectronicsComponent } from './Path-Query-Parameters/electronics/electronics.component';
 import { ActivateRoute } from './Route-Guard/canActivate/CanActivate';
+import { ReactiveFComponent } from './forms/reactive-f/reactive-f.component';
 export const routes: Routes = [
    
      {path:"",component:ProductcardComponent},
      {path:"products",component:ProductsComponent},
+     {path:"tdf",component:TDFComponent},
+     {path:"reactive",component:ReactiveFComponent},
 
      {path:"electronics",component:ElectronicsComponent,
           canActivate:[ActivateRoute]},
+
+          {path:"pipe",component:PipesComponent,
+               },
 
      {path:"profile",canActivateChild:[ActivateRoute],component:ProfileComponent,children:[
           {path:'education',component:EducationalComponent},

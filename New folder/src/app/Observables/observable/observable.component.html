@@ -1,0 +1,17 @@
+<p>observable works!</p>
+
+@for(d of data;let i = $index;track i){
+<p>{{ d.title }}</p>
+}
+
+<button class="btn btn-primary mx-2 px-5" (click)="filterData()">
+  Get Data
+</button>
+<button class="btn btn-primary mx-2 px-5" (click)="get()">Get</button>
+<button class="btn btn-danger mx-3 px-5" (click)="getProducts()">
+  Http Client
+</button>
+
+<button class="btn btn-success mx-3 px-5" (click)="insertProducts()">
+  Insert Http Client
+</button>

@@ -1,0 +1,20 @@
+Angular Testing
+------------------
+https://www.youtube.com/watch?v=Pb6gpKxgkJ8&t=6s
+
+Decorators
+-----------
+https://youtu.be/ialfZyeAbaY?si=QSCjrCdMePz24Xq5
+
+NameSpaces
+-----------
+https://www.youtube.com/watch?v=y1skr4DXPnI&t=341s
+
+Lifecycle hooks
+----------------
+https://www.youtube.com/watch?v=kor8XAVbwt4&t=10s
+
+
+
+
+

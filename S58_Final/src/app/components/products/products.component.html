@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <div class="row">
+    <h4 class="text-primary">{{ title }}</h4>
+    <div
+      class="bgImage my-2"
+      [ngStyle]="{
+        'background-image': bgImage
+      }"
+    >
+      <div>
+        <h2>{{ title }}</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          esse possimus vero aut expedita nesciunt, perspiciatis eius accusamus
+          sint dolorum facilis ea cum, eos ducimus, non quibusdam sunt! Unde,
+          dolores.
+        </p>
+      </div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui veritatis
+      amet dolor optio itaque suscipit nesciunt ab ullam repudiandae quis
+      corporis est magnam impedit laudantium molestiae, cum pariatur. Facere
+      expedita illo nobis qui! Consequuntur soluta repudiandae incidunt
+      explicabo aliquam iusto adipisci, quis nihil voluptatum quasi. Autem
+      accusamus molestias cupiditate, minus nisi magnam quia odit quam inventore
+      facere quas obcaecati fugiat blanditiis veniam repellat sint est illo
+      ullam dolores! Provident vero blanditiis, veritatis, saepe id eum vel,
+      tempora soluta quam sit odio nesciunt totam inventore? Dolorem, molestiae
+      doloremque reprehenderit sapiente consequatur accusamus ea neque, eum
+    </p>
+  </div>
+
+  <div class="row">
+    @for(product of products; track product){
+    <div class="col-4">
+      <app-product [productData]="product"></app-product>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="h3 text-success">{{ mainTitle }}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <app-card
+        [image]="data[0].image"
+        [title]="data[0].title"
+        [pName]="data[0].pName"
+      ></app-card>
+    </div>
+    <div class="col-3">
+      <app-card [image]="''" [title]="''" [pName]="''"></app-card>
+    </div>
+    <div class="col-3">
+      <app-card [image]="''" [title]="''" [pName]="''"></app-card>
+    </div>
+    <div class="col-3">
+      <app-card [image]="''" [title]="''" [pName]="''"></app-card>
+    </div>
+  </div>
+</div>

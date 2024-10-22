@@ -1,0 +1,30 @@
+<!-- <div class="card my-4">
+  <div class="card-header">
+    <img [src]="productData.image" width="100%" height="200" />
+  </div>
+  <div class="card-body">
+    <h6>{{ productData.title }}</h6>
+    <p>{{ productData.price }}</p>
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione?
+    </p>
+    <button class="btn btn-outline-success">Product Details</button>
+  </div>
+</div> -->
+
+<div class="card mt-5 mx-3">
+  <div class="card-header">
+    <img [src]="productData.image" width="250" height="200" />
+  </div>
+  <div class="card-body">
+    <h4 class="h6">{{ productData.title | titlecase }}</h4>
+    <p class="text-success">{{ productData.price | currency : "INR" }}</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing. sit amet consectetur
+      adipisicing.
+    </p>
+    <a [routerLink]="'/productdetails/' + productData.id"
+      ><button class="btn btn-outline-success">Product Details</button></a
+    >
+  </div>
+</div>
